@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+    --bg: #0d0d0f;
+    --card: #17171a;
+    --accent: #c9a34e; /* dourado elegante */
+    --text: #eaeaea;
+    --muted: #9a9a9a;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* HEADER */
+h1 {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    padding: 25px;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid #222;
+}
+
+/* GRID (CATÁLOGO PROFISSIONAL) */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* CARD */
+.jojo {
+    background: var(--card);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #222;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+/* HOVER SUTIL */
+.jojo:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* IMAGENS */
+.jojo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* CONTEÚDO */
+.jojo-content {
+    padding: 15px;
+}
+
+/* STAND */
+.jojo h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+/* INFO */
+.jojo h3 {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--muted);
+    margin: 2px 0;
+}
+
+/* DESTAQUE (USER) */
+.jojo h3 strong {
+    color: var(--text);
+}
+
+/* DIVISÃO VISUAL */
+.jojo-content::before {
+    content: "";
+    display: block;
+    height: 1px;
+    background: #222;
+    margin-bottom: 10px;
+}
